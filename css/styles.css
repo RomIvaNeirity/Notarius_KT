@@ -200,7 +200,7 @@ p {
   align-items: center;
   align-items: stretch;
   background-color: #004106;
-  padding: 28px;
+  padding: 28px 28px 14px;
 }
 
 .mob-logo {
@@ -242,9 +242,11 @@ p {
   display: flex;
   flex-wrap: wrap;
   row-gap: 24px;
-  padding: 0 28px;
+  padding: 14px 28px;
   background-color: #004106;
   color: #ffffff;
+  border-bottom: 1px solid #dbf741;
+  border-top: 1px solid #dbf741;
 }
 
 .mob-hero-title {
@@ -341,4 +343,53 @@ p {
   flex-direction: column;
   row-gap: 6px;
   margin-top: 10px;
+}
+
+/*  mob - benefits - section */
+
+.sctn-benefits {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 14px 28px;
+  background-color: #004106;
+  color: #ffffff;
+}
+
+.mob-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.mob-benefits-list-item {
+}
+
+.mob-benefits-title {
+  margin: 0 auto 14px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.mob-benefits-subtitle {
+  font-size: 14px;
+  font-weight: 200;
+  margin-bottom: 6px;
+}
+
+.mob-benefits-text {
+  display: flex;
+  align-items: center; /* або center, якщо текст однорядковий */
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.check-icons {
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid #dbf741;
+  width: 20px;
+  height: 20px;
 }

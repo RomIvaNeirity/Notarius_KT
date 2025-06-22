@@ -184,7 +184,7 @@ p {
   justify-content: left;
   align-items: center;
   border-radius: 4px;
-  font-size: 22px;
+  font-size: 20px;
   width: 100%;
   padding: 8px;
 }
@@ -192,6 +192,11 @@ p {
 .tel-link {
   font-size: 26px;
 }
+
+.mob-menu-locatoin-links {
+  display: flex;
+}
+
 /* mob header */
 
 .mob-header {
@@ -259,6 +264,8 @@ p {
 }
 
 .mob-hero-img {
+  border-radius: 4px;
+  border: 1px solid #dbf741;
   width: 80%;
   margin: 0 auto;
 }
@@ -351,7 +358,7 @@ p {
   display: flex;
   flex-wrap: wrap;
 
-  padding: 14px 28px;
+  padding: 20px 28px;
   background-color: #004106;
   color: #ffffff;
 }
@@ -360,20 +367,20 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .mob-benefits-list-item {
 }
 
 .mob-benefits-title {
-  margin: 0 auto 14px;
+  margin: 0 auto 20px;
   font-size: 16px;
   font-weight: 400;
 }
 
 .mob-benefits-subtitle {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 200;
   margin-bottom: 6px;
 }
@@ -382,7 +389,7 @@ p {
   display: flex;
   align-items: center; /* або center, якщо текст однорядковий */
   gap: 8px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 200;
 }
 
@@ -392,4 +399,30 @@ p {
   border: 1px solid #dbf741;
   width: 20px;
   height: 20px;
+}
+
+.specification-icons {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  fill: #dbf741;
+}
+
+.google-map {
+  border-radius: 4px;
+  border: 1px solid #dbf741;
+  width: 100%;
+  height: 350px;
+}
+
+.get-directions-link {
+  border-radius: 4px;
+  border: 1px solid #dbf741;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  color: #004106;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 14px 0;
 }

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Alice", sans-serif;
   color: #434455;
@@ -62,8 +66,8 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgb(179, 224, 184);
 }
 
@@ -257,6 +261,19 @@ p {
   border: 1px solid #dbf741;
   border-radius: 4px;
   padding: 4px 8px;
+  background: linear-gradient(180deg, #52a759, #003500);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mob-menu-open:hover,
+.mob-menu-open:focus {
+  background-color: #316431;
+}
+
+.mob-menu-open:active {
+  border: none;
+  background-color: #162e17; /* ще темніше при натисканні */
+  transform: scale(0.97); /* легке стиснення при натисканні */
 }
 
 /* mob-hero */
@@ -340,8 +357,8 @@ p {
 .email-icon {
   border-radius: 4px;
   border: 1px solid #dbf741;
-  width: 32px;
-  height: 32px;
+  width: 31px;
+  height: 31px;
 }
 
 .email-link {
@@ -353,10 +370,19 @@ p {
   align-items: center;
   justify-content: center;
   gap: 6px;
+  /* background: linear-gradient(180deg, #52a759, #003500);
+  transition: background-color 0.3s ease, transform 0.2s ease; */
 }
 
-.email-link:hover {
+.email-link:hover,
+.email-link:focus {
   text-decoration: underline;
+}
+
+.email-link:active {
+  border: none;
+  background-color: #162e17; /* ще темніше при натисканні */
+  transform: scale(0.97); /* легке стиснення при натисканні */
 }
 
 .hero-worktime {
@@ -427,6 +453,7 @@ p {
 }
 
 .google-map {
+  margin-top: 14px;
   border-radius: 4px;
   border: 1px solid #dbf741;
   width: 100%;
@@ -443,4 +470,6 @@ p {
   font-size: 18px;
   font-weight: 700;
   padding: 14px 0;
+  background: linear-gradient(180deg, #d0ffd4, #3f793f);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }

@@ -6,12 +6,12 @@ document.querySelectorAll('.js-animated-link').forEach(link => {
 
     setTimeout(() => {
       window.open(link.href, '_blank'); // відкриває у новій вкладці
-    }, 200); // затримка під анімацію
+    }, 300); // затримка під анімацію
   });
 });
 
 const menu = document.getElementById('mobMenu')
-const links = menu.querySelectorAll('.mob-menu-nav-links')
+const links = menu.querySelectorAll('.js-direct-link')
 
 links.forEach(link => {
   link.addEventListener('click', (e) => {
@@ -25,6 +25,6 @@ links.forEach(link => {
     // Чекаємо поки спрацює анімація opacity (у тебе 400ms)
     setTimeout(() => {
       targetElement.scrollIntoView({ behavior: 'smooth' })
-    }, 500) // затримка = час transition
+    }, 300) // затримка = час transition
   })
 })

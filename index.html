@@ -21,7 +21,7 @@
   </head>
   <body>
     <header>
-      <div class="mob-menu is-open" data-mob>
+      <div class="mob-menu is-open" id="mobMenu" data-mob>
         <div class="container mob-menu-container">
           <div class="mob-menu-header">
             <div class="mob-menu-logo">
@@ -51,12 +51,14 @@
               </li>
               <li class="mob-menu-list-item">
                 <div class="mob-menu-locatoin-links">
-                  <a href="" class="mob-menu-nav-links"
+                  <a
+                    href="https://www.google.com/maps/dir/?api=1&destination=8XW5%2BC3%20Бориспіль,%20Київська%20область"
+                    class="mob-menu-nav-links js-animated-link"
                     ><svg class="mob-menu-icons">
                       <use href="./images/icons.svg#icon-compass"></use>
                     </svg>
                     МАРШРУТ</a
-                  ><a href="" class="mob-menu-nav-links"
+                  ><a href="#location" class="mob-menu-nav-links"
                     ><svg class="mob-menu-icons">
                       <use href="./images/icons.svg#icon-location2"></use>
                     </svg>
@@ -152,7 +154,7 @@
           <ul class="hero-worktime-grafiq">
             <li>Понеділок-п'ятниця: 9.00 - 19.00</li>
             <li>Субота: 9.00 - 14.00</li>
-            <li>В інший час - по домовленості</li>
+            <li>В інший час - по домовленості.</li>
           </ul>
         </div>
       </section>
@@ -204,7 +206,7 @@
             </p>
           </li>
         </ul>
-        <h2 class="mob-benefits-title">СПЕЦІАЛІЗАЦІЯ:</h2>
+        <h2 class="mob-benefits-title">ВИДИ ДІЯЛЬНОСТІ:</h2>
         <ul class="mob-benefits-list">
           <li class="mob-benefits-list-item">
             <h3 class="mob-benefits-subtitle">Нотаріат -</h3>
@@ -242,7 +244,7 @@
           </li>
         </ul>
       </section>
-      <section class="container sctn-location">
+      <section class="container sctn-location" id="location">
         <a
           class="get-directions-link"
           href="https://www.google.com/maps/dir/?api=1&destination=8XW5%2BC3%20Бориспіль,%20Київська%20область"
@@ -261,5 +263,6 @@
       <footer class="container">@neirity</footer>
     </main>
     <script src="./js/mob-menu.js"></script>
+    <script src="./js/animation-link.js"></script>
   </body>
 </html>

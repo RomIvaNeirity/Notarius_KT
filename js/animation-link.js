@@ -1,4 +1,4 @@
-
+/* 
 document.querySelectorAll('.js-animated-link').forEach(link => {
   link.addEventListener('click', (e) => {
     e.preventDefault(); 
@@ -28,3 +28,4 @@ links.forEach(link => {
     }, 300) // затримка = час transition
   })
 })
+ */

@@ -38,7 +38,7 @@
     refs.modal.classList.remove("is-open");
     document.body.classList.remove("menu-open");
   }
-})();*/
+})();
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -68,3 +68,79 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.paddingRight = "";
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-mob-open]"),
+    closeModalBtn: document.querySelector("[data-mob-close]"),
+    modal: document.querySelector("[data-mob]"),
+    anchorLinks: document.querySelectorAll('.mob-menu-nav-links[href^="#"]'),
+  };
+
+  if (!refs.openModalBtn || !refs.closeModalBtn || !refs.modal) {
+    console.warn('One or more modal elements not found in DOM');
+    return;
+  }
+
+  refs.openModalBtn.addEventListener("click", openMenu);
+  refs.closeModalBtn.addEventListener("click", closeMenu);
+
+  refs.anchorLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
+  });
+
+  function openMenu() {
+    refs.modal.classList.add("is-open");
+    document.body.classList.add("menu-open");
+    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+  }
+
+  function closeMenu() {
+    refs.modal.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    document.body.style.paddingRight = "";
+  }
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  const refs = {
+    openModalBtn: document.querySelector("[data-mob-open]"),
+    closeModalBtn: document.querySelector("[data-mob-close]"),
+    modal: document.querySelector("[data-mob]"),
+    scrollContainer: document.querySelector(".mob-menu-container"),
+    anchorLinks: document.querySelectorAll('.mob-menu-nav-links[href^="#"]'),
+  };
+
+  if (!refs.openModalBtn || !refs.closeModalBtn || !refs.modal) {
+    console.warn('One or more modal elements not found in DOM');
+    return;
+  }
+
+  refs.openModalBtn.addEventListener("click", openMenu);
+  refs.closeModalBtn.addEventListener("click", closeMenu);
+
+  refs.anchorLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  function openMenu() {
+    refs.modal.classList.add("is-open");
+    document.body.classList.add("menu-open");
+
+    // компенсуємо скролбар
+    document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+
+    // ⬆️ Прокрутити контейнер меню до початку
+    refs.scrollContainer.scrollTop = 0;
+  }
+
+  function closeMenu() {
+    refs.modal.classList.remove("is-open");
+    document.body.classList.remove("menu-open");
+    document.body.style.paddingRight = "";
+  }
+});
+
+

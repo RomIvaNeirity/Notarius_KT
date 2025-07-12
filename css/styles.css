@@ -84,6 +84,8 @@ p {
 }
 
 .mob-menu-container {
+  flex-grow: 1;
+  overflow-y: auto;
   max-width: 320px;
   position: relative;
   background-color: #004106;
@@ -497,12 +499,6 @@ p {
     padding-right: 100px;
   }
 
-  .mob-menu-container {
-    flex-grow: 1;
-    overflow-y: auto;
-    /*  height: 100vh; */
-  }
-
   .mob-menu-nav {
     margin: 0 auto;
     width: 70%;
@@ -569,6 +565,18 @@ p {
     padding-left: 64px;
     padding-right: 64px;
   }
+
+  .mob-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .mob-menu-open {
+    display: none;
+  }
+
   .mob-hero {
     grid-template-columns: 33% 57%;
     gap: 10%;

@@ -61,7 +61,7 @@ p {
   top: 0;
   right: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #81ddba;
   opacity: 0;
   visibility: hidden;
@@ -155,6 +155,7 @@ p {
   margin-bottom: 28px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   row-gap: 20px;
 }
 
@@ -486,9 +487,21 @@ p {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
+
+  .mob-menu-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    /*  height: 100vh; */
+  }
+
+  .mob-menu-nav {
+    margin: 0 auto;
+    width: 70%;
+  }
+
   .mob-hero {
     display: grid;
     grid-template-columns: 35% 60%;

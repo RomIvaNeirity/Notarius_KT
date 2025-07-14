@@ -500,7 +500,14 @@ p {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* ==== sctn-docs==== */
+/* === common pages styles === */
+
+.desktop-sctn-h {
+  font-weight: 400;
+  margin-bottom: 28px;
+}
+
+/* ==== page documents==== */
 
 .sctn-docs,
 .sctn-loc {
@@ -509,7 +516,7 @@ p {
   color: #ffffff;
 }
 
-/* ==== sctn-loc ==== */
+/* ==== page location ==== */
 
 .weather-widget {
   margin-top: 28px;
@@ -521,6 +528,35 @@ p {
 }
 .desktop-sctn-discrb-text {
   font-size: 16px;
+}
+
+/* === footer ==== */
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #004106;
+  color: #ffffff;
+  padding-top: 18px;
+  padding-bottom: 28px;
+}
+
+.footer-desktop-nav {
+  margin-top: 28px;
+}
+
+.footer-desktop-nav-list-item {
+  width: 100%;
+}
+
+.footer-desktop-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav-link {
+  display: block;
 }
 
 /* ==== TAB VERSION ==== */
@@ -595,16 +631,18 @@ p {
     margin-top: 28px;
   }
 
-  .desktop-sctn-h {
+  /* .desktop-sctn-h {
     font-weight: 400;
     margin-bottom: 28px;
   }
-
+ */
   .desktop-sctn-discrb-text {
     font-size: 18px;
     font-weight: 400;
   }
 }
+
+/* ==== TAB VERSION ==== */
 
 @media screen and (min-width: 1440px) {
   .container {
@@ -624,9 +662,9 @@ p {
     display: none;
   }
 
-  .header-desktop-nav {
-    display: block;
-  }
+  /* .header-desktop-nav {
+    display: block; 
+  }*/
 
   .mob-logo {
     font-size: 20px;
@@ -743,5 +781,25 @@ p {
   }
   .desktop-sctn-discrb-text {
     font-size: 24px;
+  }
+
+  /*  === desctop footer === */
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-desktop-nav {
+    margin: 0;
+    width: 70%;
+  }
+
+  .footer-desktop-nav-list {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .footer-nav-link {
+    display: flex;
   }
 }

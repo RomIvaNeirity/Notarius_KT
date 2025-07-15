@@ -507,14 +507,16 @@ p {
   margin-bottom: 28px;
 }
 
-/* ==== page documents==== */
-
 .sctn-docs,
 .sctn-loc {
+  border-top: 1px solid #dbf741;
+  font-size: 18x;
   padding: 20px 28px;
   background-color: #004106;
   color: #ffffff;
 }
+
+/* ==== page documents==== */
 
 /* ==== page location ==== */
 
@@ -539,6 +541,8 @@ p {
   color: #ffffff;
   padding-top: 18px;
   padding-bottom: 28px;
+
+  border-top: 1px solid #dbf741;
 }
 
 .footer-desktop-nav {
@@ -785,6 +789,8 @@ p {
 
   /*  === desctop footer === */
   .footer-container {
+    padding-top: 32px;
+    padding-bottom: 64px;
     flex-direction: row;
     justify-content: space-between;
   }

@@ -99,7 +99,8 @@ p {
   flex-direction: column;
   height: 100%;
   box-shadow: 0 0 30px 15px rgba(0, 65, 6, 1);
-  padding: 28px 28px 80px;
+  padding-top: 28px;
+  padding-bottom: 80px;
 }
 
 .mob-menu-header {
@@ -543,6 +544,12 @@ p {
 
 strong {
   font-weight: 400;
+  color: #6ec98c;
+}
+
+.page-intersite-links {
+  color: #6ec98c;
+  text-decoration: underline;
 }
 
 .sctn-docs,
@@ -558,21 +565,23 @@ strong {
   margin-bottom: 28px;
 }
 
+.page-sctn-intro {
+  margin-bottom: 14px;
+}
 .desktop-sctn-h {
   font-weight: 400;
   font-size: 20px;
 }
 
 .desktop-sctn-discrb-text {
-  font-weight: 400;
+  font-weight: 300;
   text-align: justify;
   font-size: 14px;
-  margin-bottom: 14px;
 }
 
 /* ==== sctn about ===== */
 
-.page-sctn-about-intro {
+.about-page-first-main-container {
   margin-bottom: 14px;
 }
 
@@ -581,8 +590,46 @@ strong {
   border: 1px solid #dbf741;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 14px;
 }
 
+.sctn-about-img-viz {
+  display: none;
+}
+
+.about-page-first-main-second-subcontainer {
+  margin-bottom: 14px;
+}
+
+.about-page-second-main-container {
+  margin-bottom: 14px;
+}
+
+.about-page-second-main-first-subcontainer {
+  margin-bottom: 14px;
+}
+
+.sctn-about-tel-link {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.about-page-subcontainer-title {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 14px;
+}
+.about-mob-benefits-subtitle {
+  font-size: 16px;
+  font-weight: 200;
+}
+.about-mob-benefits-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 200;
+}
 /* ==== TAB VERSION ==== */
 
 @media screen and (min-width: 768px) {
@@ -658,25 +705,73 @@ strong {
   /* ==== TAB common pages styles ====*/
 
   .desktop-sctn-discrb-text {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
   }
 
   /* ==== sctn abot ==== */
 
-  .page-sctn-about-intro {
+  /*  .page-sctn-intro {
     width: 100%;
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
+  } */
+
+  .about-page-first-main-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #dbf741;
+    border-top: 1px solid #dbf741;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .about-page-first-main-first-subcontainer {
+    width: 40%;
   }
 
   .sctn-about-img-not {
-    float: left;
+    width: 100%;
+  }
+
+  .sctn-about-img-viz {
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #dbf741;
+  }
+
+  .sctn-about-tel-link {
+    padding: 0;
+    font-size: 18px;
+  }
+
+  .about-page-second-main-container {
+    display: flex;
+  }
+
+  .about-page-second-main-first-subcontainer {
+    width: 60%;
+    margin-bottom: 0;
+    padding-top: 34px;
+    padding-right: 34px;
+  }
+
+  .about-page-second-main-second-subcontainer {
     width: 40%;
-    height: auto;
-    object-fit: contain;
-    margin: 0 28px 0 0;
+  }
+
+  .sctn-about-img-vidznaka {
+  }
+
+  .about-page-first-main-second-subcontainer {
+    width: 60%;
+    padding-top: 14px;
+    padding-left: 34px;
+  }
+
+  .about-page-first-main-third-subcontainer {
+    margin-top: 14px;
   }
 }
 
@@ -860,5 +955,26 @@ strong {
 
   .footer-desktop-nav-list-item {
     width: auto;
+  }
+
+  /* ==== desltop sctn about ==== */
+
+  .about-mob-benefits-subtitle {
+    font-size: 28px;
+    font-weight: 200;
+  }
+
+  .mob-benefits-list {
+    flex-direction: column;
+  }
+
+  .about-mob-benefits-text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+    font-size: 24px;
+    font-weight: 200;
   }
 }

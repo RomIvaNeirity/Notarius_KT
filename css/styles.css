@@ -729,6 +729,7 @@ strong {
   }
   .about-page-first-main-first-subcontainer {
     width: 40%;
+    padding-top: 24px;
   }
 
   .sctn-about-img-not {
@@ -748,6 +749,10 @@ strong {
 
   .about-page-second-main-container {
     display: flex;
+  }
+
+  .about-page-subcontainer-title {
+    font-size: 18px;
   }
 
   .about-page-second-main-first-subcontainer {

@@ -865,6 +865,16 @@ strong {
   .mob-benefits-list-item {
     width: calc(50% - 8px);
   }
+  .mob-benefits-title {
+    font-size: 28px;
+  }
+  .mob-benefits-subtitle {
+    font-size: 24px;
+  }
+
+  .mob-benefits-text {
+    font-size: 22px;
+  }
 
   .activity-fields .mob-benefits-list-item {
     width: 100%;
@@ -872,14 +882,6 @@ strong {
 
   .activity-fields {
     margin-bottom: 0;
-  }
-
-  .mob-benefits-title {
-    font-size: 24px;
-  }
-
-  .mob-benefits-text {
-    font-size: 20px;
   }
 
   /* ==== desktop section loc ===== */
@@ -913,26 +915,6 @@ strong {
   }
 
   /*  === desctop footer === */
-  /* .footer-container {
-    padding-top: 32px;
-    padding-bottom: 64px;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .footer-desktop-nav {
-    margin: 0;
-    width: 70%;
-  }
-
-  .footer-desktop-nav-list {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .footer-nav-link {
-    display: flex;
-  } */
 
   .footer-container {
     flex-direction: row;
@@ -959,22 +941,30 @@ strong {
 
   /* ==== desltop sctn about ==== */
 
-  .about-mob-benefits-subtitle {
+  .about-page-first-main-first-subcontainer {
+    padding-top: 32px;
+    margin: 0;
+  }
+
+  .about-page-subcontainer-title {
     font-size: 28px;
-    font-weight: 200;
   }
 
-  .mob-benefits-list {
-    flex-direction: column;
+  .about-sctn-mob-benefits-list-item {
+    font-size: 32px;
   }
 
-  .about-mob-benefits-text {
-    width: 100%;
+  .sctn-about-img-viz {
+    display: none;
+  }
+
+  .sctn-about-tel-link {
+    font-size: 28px;
+  }
+
+  .about-page-second-main-first-subcontainer {
     display: flex;
+    padding-right: 32px;
     align-items: center;
-
-    gap: 6px;
-    font-size: 24px;
-    font-weight: 200;
   }
 }

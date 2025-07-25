@@ -78,7 +78,8 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: rgb(179, 224, 184);
 }
@@ -152,7 +153,9 @@ p {
   border-radius: 4px;
   padding: 4px 12px;
   background: linear-gradient(180deg, #52a759, #003500);
-  transition: background-color 0.7s ease, transform 0.5s ease;
+  transition:
+    background-color 0.7s ease,
+    transform 0.5s ease;
 }
 
 .mob-menu-close-button:hover,
@@ -210,7 +213,9 @@ p {
   width: 100%;
   padding: 8px;
   background: linear-gradient(180deg, #52a759, #003500);
-  transition: background-color 0.7s ease, transform 0.5s ease;
+  transition:
+    background-color 0.7s ease,
+    transform 0.5s ease;
   cursor: pointer;
 }
 
@@ -274,7 +279,9 @@ p {
   border-radius: 4px;
   padding: 4px 8px;
   background: linear-gradient(180deg, #52a759, #003500);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .mob-menu-open:hover,
@@ -498,7 +505,9 @@ p {
   font-weight: 700;
   padding: 14px 0;
   background: linear-gradient(180deg, #d0ffd4, #3f793f);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
 .weather-widget {
@@ -565,9 +574,9 @@ strong {
   margin-bottom: 28px;
 }
 
-.page-sctn-intro {
+/* .page-sctn-intro {
   margin-bottom: 14px;
-}
+} */
 .desktop-sctn-h {
   font-weight: 400;
   font-size: 20px;
@@ -576,7 +585,8 @@ strong {
 .desktop-sctn-discrb-text {
   font-weight: 300;
   text-align: justify;
-  font-size: 14px;
+  font-size: 16px;
+  padding-bottom: 14px;
 }
 
 /* ==== sctn about ===== */
@@ -630,6 +640,105 @@ strong {
   font-size: 14px;
   font-weight: 200;
 }
+
+/* === page actions === */
+
+.actions-page-second-main-container {
+  padding-top: 14px;
+  border-top: 1px solid #dbf741;
+}
+
+.actions-page-first-main-first-subcontainer {
+  display: none;
+}
+
+.actions-page-first-main-second-subcontainer {
+  margin-bottom: 14px;
+}
+
+.action-page-subcontainer-title {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 14px;
+}
+
+.action-page-subcontainer-subtitle {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 14px;
+}
+
+.action-block {
+  padding-top: 14px;
+  border-top: 1px solid #dbf741;
+}
+
+.action-page-action-list-header {
+  margin-bottom: 14px;
+}
+
+.action-page-action-list-item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 14px;
+}
+
+.action-page-action-list-item-text {
+  margin-left: 8px;
+}
+.finger-down-icon {
+  fill: orangered;
+  stroke: #dbf741;
+  flex-shrink: 0;
+
+  width: 24px;
+  height: 24px;
+
+  transition: transform 0.3s ease;
+}
+
+/* Повертає стрілку догори */
+.finger-down-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.action-page-action-list {
+  padding-left: 12px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin: 0;
+}
+
+.action-page-action-list.visible {
+  max-height: 500px; /* Підбери під розмір свого списку */
+}
+
+.action-page-action-list-open-button {
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  user-select: none;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #52a759, #003500);
+}
+
+.list-open-button-text {
+  font-weight: 200;
+  font-size: 14px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+/* .action-page-action-list-open-button p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+ */
 /* ==== TAB VERSION ==== */
 
 @media screen and (min-width: 768px) {
@@ -777,6 +886,25 @@ strong {
 
   .about-page-first-main-third-subcontainer {
     margin-top: 14px;
+  }
+
+  /* === page actions === */
+
+  .actions-page-first-main-container {
+  }
+
+  .actions-page-first-main-first-subcontainer {
+    display: block;
+    width: 30%;
+  }
+
+  .sctn-action-youtube-links {
+    width: 100%;
+    height: auto;
+  }
+
+  .actions-page-first-main-second-subcontainer {
+    width: 70%;
   }
 }
 

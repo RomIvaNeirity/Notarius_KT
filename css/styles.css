@@ -673,8 +673,19 @@ strong {
   border-top: 1px solid #dbf741;
 }
 
+.action-subblok {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .action-page-action-list-header {
   margin-bottom: 14px;
+}
+
+.action-page-action-sublist-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .action-page-action-list-item {
@@ -689,14 +700,14 @@ strong {
   margin-left: 8px;
 }
 .finger-down-icon {
-  fill: orangered;
-  stroke: #dbf741;
+  /* fill: orangered;
+  stroke: #dbf741; */
   flex-shrink: 0;
 
   width: 24px;
   height: 24px;
 
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* Повертає стрілку догори */
@@ -705,15 +716,24 @@ strong {
 }
 
 .action-page-action-list {
-  padding-left: 12px;
+  padding-left: 4px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.6s ease-in;
   margin: 0;
 }
 
+.action-sublist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.action-p-action-sublist-item {
+  padding-left: 4px;
+}
 .action-page-action-list.visible {
-  max-height: 500px; /* Підбери під розмір свого списку */
+  max-height: 1500px; /* Підбери під розмір свого списку */
 }
 
 .action-page-action-list-open-button {
@@ -725,6 +745,10 @@ strong {
   user-select: none;
   border-radius: 4px;
   background: linear-gradient(180deg, #52a759, #003500);
+}
+
+.sublist-open-button {
+  padding: 4px;
 }
 
 .list-open-button-text {
@@ -891,6 +915,7 @@ strong {
   /* === page actions === */
 
   .actions-page-first-main-container {
+    display: flex;
   }
 
   .actions-page-first-main-first-subcontainer {

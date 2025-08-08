@@ -645,7 +645,6 @@ strong {
 
 .actions-page-second-main-container {
   padding-top: 14px;
-  border-top: 1px solid #dbf741;
 }
 
 .actions-page-first-main-first-subcontainer {
@@ -653,6 +652,18 @@ strong {
 }
 
 .actions-page-first-main-second-subcontainer {
+}
+
+.actions-page-second-main-first-subcontainer {
+  border-bottom: 1px solid #dbf741;
+  margin-bottom: 28px;
+}
+
+.youtube-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  margin-right: 6px;
 }
 
 .action-page-subcontainer-title {
@@ -921,8 +932,52 @@ strong {
   .actions-page-first-main-first-subcontainer {
     display: block;
     width: 35%;
-    height: 450px;
+    height: auto;
     overflow: hidden;
+    padding-right: 22px;
+    padding-top: 22px;
+    margin-bottom: 28px;
+    border-top: 1px solid #dbf741;
+  }
+
+  .carousel-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .carousel-container {
+    height: 570px; /* 3 фрейми по 190px */
+    overflow: hidden;
+
+    margin: 14px 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-track iframe {
+    width: 100%;
+    height: 150px;
+    border: none;
+  }
+
+  .carousel-item {
+    height: 190px;
+  }
+
+  .carousel-btn {
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .carousel-btn:disabled {
+    cursor: not-allowed;
   }
 
   .action-page-subcontainer-title {
@@ -937,6 +992,12 @@ strong {
     margin-bottom: 14px;
   }
 
+  .youtube-slider-header {
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+  }
+
   .sctn-action-youtube-links {
     height: 150px;
     width: 100%;
@@ -944,13 +1005,30 @@ strong {
     border: none;
   }
 
+  .youtube-links-headers {
+    display: flex;
+    font-weight: 100;
+    font-size: 16px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .actions-page-first-main-second-subcontainer {
     width: 65%;
-    padding-left: 28px;
-    padding-top: 28px;
+    padding-left: 22px;
+    padding-top: 22px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 32px;
+    margin-bottom: 28px;
+    border-left: 1px solid #dbf741;
+    border-top: 1px solid #dbf741;
+  }
+
+  .actions-page-second-main-first-subcontainer {
+    display: none;
   }
 }
 
@@ -1145,5 +1223,39 @@ strong {
     display: flex;
     padding-right: 32px;
     align-items: center;
+  }
+
+  .actions-page-first-main-first-subcontainer {
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+
+  .actions-page-first-main-second-subcontainer {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+
+  .action-page-subcontainer-title {
+    font-size: 32px;
+  }
+
+  .youtube-slider-header {
+    font-size: 24px;
+  }
+
+  .youtube-links-headers {
+    font-size: 18px;
+  }
+  .action-page-subcontainer-subtitle {
+    font-size: 24px;
+  }
+
+  .list-open-button-text {
+    font-size: 24px;
+  }
+
+  .finger-down-icon {
+    width: 34px;
+    height: 34px;
   }
 }

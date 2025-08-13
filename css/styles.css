@@ -773,6 +773,82 @@ strong {
   font-weight: bold;
 }
  */
+
+/* page docs  */
+
+.page-docs-sctn-hero {
+  position: relative;
+  border-top: 1px solid #dbf741;
+  background-color: #004106;
+  color: #ffffff;
+  padding: 0;
+}
+
+.image-trans-header-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+.docs-hero-header {
+  text-align: center;
+
+  overflow: hidden;
+
+  min-height: 80px; /* резерв місця */
+  opacity: 0; /* з’явиться плавно */
+  transition: opacity 0.5s ease-in;
+}
+
+.docs-hero-header.visible {
+  opacity: 1;
+}
+
+.page-hero-card-link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.image-trans-header-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sliding-card {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%; /* тепер на всю висоту секції */
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: top 1.2s ease-out;
+  opacity: 0;
+}
+
+.sliding-card.show {
+  top: 0;
+  opacity: 1;
+}
+
+.page-hero-tel-link {
+  padding: 2px;
+  height: auto;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 100;
+}
+
 /* ==== TAB VERSION ==== */
 
 @media screen and (min-width: 768px) {
@@ -1029,6 +1105,23 @@ strong {
 
   .actions-page-second-main-first-subcontainer {
     display: none;
+  }
+
+  /* ==== documents page ==== */
+
+  .sliding-card {
+    top: 0; /* вже не зсунутий вверх */
+    left: 100%; /* ховаємо за правим краєм */
+    height: 100%;
+    width: 100%;
+    transition:
+      left 1.2s ease-out,
+      opacity 1.2s ease-out;
+  }
+
+  .sliding-card.show {
+    left: 0;
+    opacity: 1;
   }
 }
 

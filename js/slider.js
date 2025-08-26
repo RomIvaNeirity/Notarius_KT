@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
   const slidingCard = document.querySelector('.sliding-card');
+  document.querySelector('.page-hero-sctn-directions-link').classList.add('show');
   const header = slidingCard.querySelector('.docs-hero-header');
   const fullText = header.textContent.trim();
 

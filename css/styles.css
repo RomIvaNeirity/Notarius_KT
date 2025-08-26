@@ -212,7 +212,7 @@ p {
   font-size: 20px;
   width: 100%;
   padding: 8px;
-  background: linear-gradient(180deg, #52a759, #003500);
+  background: linear-gradient(180deg, #52a75962, #00350077);
   transition:
     background-color 0.7s ease,
     transform 0.5s ease;
@@ -577,6 +577,23 @@ strong {
 /* .page-sctn-intro {
   margin-bottom: 14px;
 } */
+
+.page-contact-sctn {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.page-contact-sctn-cotnact-container {
+  font-weight: 700;
+  color: #004106;
+  margin-bottom: 18px;
+}
+
+.page-contact-sctn-worktime-container {
+  font-weight: 600;
+  color: #004106;
+}
+
 .desktop-sctn-h {
   font-weight: 400;
   font-size: 20px;
@@ -587,6 +604,11 @@ strong {
   text-align: justify;
   font-size: 16px;
   padding-bottom: 14px;
+}
+
+.page-sctn-email-link {
+  font-weight: 700;
+  color: #004106;
 }
 
 /* ==== sctn about ===== */
@@ -731,6 +753,7 @@ strong {
   overflow: hidden;
   transition: max-height 0.6s ease-in;
   margin: 0;
+  will-change: max-height;
 }
 
 .action-sublist {
@@ -743,7 +766,7 @@ strong {
   padding-left: 4px;
 }
 .action-page-action-list.visible {
-  max-height: 1500px; /* Підбери під розмір свого списку */
+  /* max-height: 1500px; Підбери під розмір свого списку */
 }
 
 .action-page-action-list-open-button {
@@ -777,11 +800,12 @@ strong {
 /* page docs  */
 
 .page-docs-sctn-hero {
+  overflow: hidden;
   position: relative;
   border-top: 1px solid #dbf741;
-  background-color: #004106;
+
   color: #ffffff;
-  padding: 0;
+  padding: 12px 0 12px 0;
 }
 
 .image-trans-header-card {
@@ -791,11 +815,17 @@ strong {
   width: 100%;
 }
 
+.image-trans-header-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* обрізає з обох боків */
+  object-position: center; /* центрує по вертикалі і горизонталі */
+}
+
 .docs-hero-header {
   text-align: center;
-
   overflow: hidden;
-
   min-height: 80px; /* резерв місця */
   opacity: 0; /* з’явиться плавно */
   transition: opacity 0.5s ease-in;
@@ -811,26 +841,20 @@ strong {
   gap: 8px;
 }
 
-.image-trans-header-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
 .sliding-card {
   position: absolute;
   top: -100%;
   left: 0;
   width: 100%;
   height: 100%; /* тепер на всю висоту секції */
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.35);
   color: white;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   transition: top 1.2s ease-out;
   opacity: 0;
@@ -847,6 +871,29 @@ strong {
   width: 100%;
   font-size: 12px;
   font-weight: 100;
+}
+
+.page-hero-sctn-directions-link {
+  display: flex;
+  margin: 12px auto 0;
+  padding: 2px;
+  width: 205px;
+  align-items: center;
+  opacity: 0;
+  transition:
+    transform 1s ease-out,
+    opacity 1s ease-out;
+  transform: translateY(100px);
+}
+.page-hero-sctn-directions-link.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.page-hero-sctn-directions-link-text {
+  font-size: 16px;
+  text-align: center;
+  width: 80%;
 }
 
 /* ==== TAB VERSION ==== */
@@ -926,6 +973,16 @@ strong {
   .desktop-sctn-discrb-text {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  .page-contact-sctn {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .page-contact-sctn-worktime-container {
+    width: 45%;
+    padding-right: 18px;
   }
 
   /* ==== sctn abot ==== */
@@ -1109,6 +1166,11 @@ strong {
 
   /* ==== documents page ==== */
 
+  .page-docs-sctn-hero {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .sliding-card {
     top: 0; /* вже не зсунутий вверх */
     left: 100%; /* ховаємо за правим краєм */
@@ -1117,11 +1179,41 @@ strong {
     transition:
       left 1.2s ease-out,
       opacity 1.2s ease-out;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
   .sliding-card.show {
     left: 0;
     opacity: 1;
+  }
+
+  .image-trans-header-card {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+
+    /* дай контейнеру реальну висоту */
+    height: 400px; /* підбери під себе */
+  }
+
+  .image-trans-header-card img {
+    height: 100%; /* ключове: НЕ auto */
+    object-fit: cover; /* обрізає */
+    object-position: center; /* центрує виріз */
+    display: block;
+  }
+
+  .page-hero-tel-link {
+    background: linear-gradient(180deg, #52a75962, #00350077);
+    padding: 4px;
+  }
+
+  .docs-hero-header {
+    height: auto;
+    font-size: 28px;
+    margin-bottom: 64px;
   }
 }
 
@@ -1350,5 +1442,42 @@ strong {
   .finger-down-icon {
     width: 34px;
     height: 34px;
+  }
+
+  /*  ====   documents sctn ===== */
+
+  .sctn-docs {
+    padding-top: 34px;
+  }
+
+  .image-trans-header-card {
+    height: 600px;
+  }
+
+  .docs-hero-header {
+    font-size: 52px;
+    margin-bottom: 140px;
+  }
+
+  .page-hero-sctn-directions-link-text {
+    font-size: 28px;
+  }
+  .page-hero-sctn-directions-link {
+    width: 430px;
+    font-size: 28px;
+  }
+
+  .page-docs-list-container {
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  .page-docs-sctn-text {
+    font-size: 22px;
+    text-align: justify;
+  }
+
+  .page-contact-sctn {
+    width: 66%;
   }
 }
